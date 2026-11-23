@@ -26,6 +26,7 @@
   `uv run robot --variable HEADLESS:true src/tests` in headless environments.
   A single test can be run with:
   `uv run robot --variable HEADLESS:true --test "Login With Correct Credentials" src/tests/login.robot`.
+- Python unit tests are executed with `uv run pytest`.
 - No lint configuration or build command is defined.
 
 ## Architecture and conventions
@@ -49,3 +50,8 @@
 - Login Robot suites use `src/tests/resource.robot` and `AppLibrary.py`.
   Tests reset state through `POST /tests/reset`; preserve this setup path and
   keep browser scenarios deterministic.
+- Do not change `viikko4/tdd-ostoskori/src/ostos.py` or
+  `viikko4/tdd-ostoskori/src/tuote.py`.
+- Do not edit tests unless the user explicitly asks for test changes.
+- Implement only the absolutely minimal code required for the current tests
+  to pass.
