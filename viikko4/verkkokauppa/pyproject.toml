@@ -1,0 +1,12 @@
+[project]
+name = "verkkokauppa"
+version = "0.1.0"
+description = ""
+requires-python = ">=3.14"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "coverage>=7.17.5",
+    "pytest>=9.1.1",
+]
